@@ -17,11 +17,11 @@
         <td th:text="${course.title}"></td>
         <td th:text="${course.instructor}"></td>
         <td th:text="${course.credit}"></td>
-        <tb>
+        <td>
             <a th:href="@{/update/{id}(id=${course.id})}">Update</a> -
             <a th:href="@{/detail/{id}(id=${course.id})}">Details</a> -
             <a th:href="@{/delete/{id}(id=${course.id})}">Delete</a>
-        </tb></tr>
+        </td></tr>
 </table>
 </body>
 </html>

@@ -14,13 +14,13 @@ public class DataLoader implements CommandLineRunner
     @Override
     public void run(String... strings) throws Exception
     {
-        Course course = new Course("Astrophysics", "Neil D Tyson", "Just a courseon stars", 3);
+        Course course = new Course("Astrophysics", "Neil D Tyson", "Just a course on stars", 3);
         repository.save(course);
 
-        course = new Course("Calculus", "Carol Hen", "Rate Change", 9);
+        course = new Course("Calculus", "Carol Henley", "Rate of Change of the rate of change", 3);
         repository.save(course);
 
-        course = new Course("English", "Tarol Fen", "Grammar Learner", 2);
+        course = new Course("Freshman English", "Geraldine Pegram", "Grammar Learner", 3);
         repository.save(course);
     }
 }
