@@ -42,10 +42,17 @@ public class HomeController
         return "redirect:/";
     }
 
+    @RequestMapping("/detail/{id}")
+    public String showCourse(@PathVariable("id") long id, Model model)
+    {
+        model.addAttribute("course", courseRepository.findById(id).get());
+        return "show";
+    }
+
     @RequestMapping("/update/{id}")
     public String updateCourse(@PathVariable("id") long id, Model model)
     {
-        model.addAttribute("courses", courseRepository.findById(id).get());
+        model.addAttribute("course", courseRepository.findById(id).get());
         return "courseform";
     }
 
